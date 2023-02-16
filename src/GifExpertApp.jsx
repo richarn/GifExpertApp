@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { AddCategory } from "./Components/AddCategory";
 
 export const GifExpertApp = () => {
 
@@ -7,10 +8,7 @@ export const GifExpertApp = () => {
   const [categories, setcategories] = useState(['One punch', 'other thing']);
 
   const onAddCategory = () => {
-    
     setcategories([ ...categories, 'Hello' ]);
-
-    // console.log('Hello');
   }
 
 
@@ -20,6 +18,8 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1>
 
         {/* Input */}
+
+        <AddCategory />
 
         {/* Listado de Glif */}
 
