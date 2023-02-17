@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-export const AddCategory = () => {
+export const AddCategory = ( {setcategories} ) => {
 
 const [ inputValue, setinputValue ] = useState('Pan');
 
@@ -11,7 +10,11 @@ const InputChange = ({ target }) => {
 
 const onSubmit = ( event ) => {
     event.preventDefault();
-    console.log( inputValue );
+
+    if( inputValue.trim().length <= 1) return;
+
+    setcategories( categories => [ inputValue, ...categories ]);
+    setinputValue('');
 }
     return (
 
