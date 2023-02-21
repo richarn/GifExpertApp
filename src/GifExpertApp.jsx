@@ -22,6 +22,7 @@ export const GifExpertApp = () => {
 
         <AddCategory 
           // setcategories = { setcategories }
+          // on NewCategory es una funcion
           onNewCategory = { (valuedelNewCategorie) => onAddCategory(valuedelNewCategorie) }
         />
 
