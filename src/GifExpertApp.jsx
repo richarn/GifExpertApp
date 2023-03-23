@@ -4,11 +4,11 @@ import { AddCategory } from "./Components/AddCategory";
 
 export const GifExpertApp = () => {
 
-  
   const [ categories, setcategories ] = useState(['Hola', 'Hola2']);
 
   const onAddCategory = ( newCategory ) => {
-    // console.log(newCategory);
+
+    if (categories.includes(newCategory)) return;
     setcategories([ newCategory, ...categories ]);
   }
 
@@ -21,13 +21,10 @@ export const GifExpertApp = () => {
         {/* Input */}
 
         <AddCategory 
-          // setcategories = { setcategories }
-          // on NewCategory es una funcion
           onNewCategory = { (valuedelNewCategorie) => onAddCategory(valuedelNewCategorie) }
         />
 
         {/* Listado de Glif */}
-
 
         <ol>
             {/* recorre el hook categories */}                
